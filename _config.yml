@@ -1,0 +1,12 @@
+title: Ameya Gurjar
+description: My personal site
+author: Ameya Gurjar
+theme: minima
+header_pages:
+  - about.md
+  - experience.md
+  - projects.md
+  - resume.md
+
+
+

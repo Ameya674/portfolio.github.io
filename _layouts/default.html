@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ '/assets/images/ameya.jpg' | relative_url }}" type="image/png">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background: #f9f9f9;
+        color: #333;
+        padding-top: 70px;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #111827;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 2rem;
+        z-index: 999;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+      }
+
+      .profile-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .nav-brand:hover {
+        color: #38bdf8;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .nav-links a {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        border-radius: 8px;
+        background-color: #1f2937;
+        color: #f3f4f6;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links a:hover {
+        background-color: #38bdf8;
+        color: #0f172a;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+      }
+
+      main {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        color: #777;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a class="nav-left" href="{{ '/' | relative_url }}">
+        <img class="profile-pic" src="{{ '/assets/images/test.ico' | relative_url }}" alt="Ameya Gurjar">
+        <span class="nav-brand">Ameya Gurjar</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="{{ '/about' | relative_url }}">About</a></li>
+        <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+        <li><a href="{{ '/experience' | relative_url }}">Experience</a></li>
+        <li><a href="{{ '/resume' | relative_url }}">Resume</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer>
+      &copy; {{ site.time | date: '%Y' }} Ameya Gurjar. All rights reserved.
+    </footer>
+  </body>
+</html>
