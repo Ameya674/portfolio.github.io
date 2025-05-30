@@ -1,0 +1,103 @@
+---
+layout: default
+title: Projects
+---
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+  }
+
+  .projects-container {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 2rem;
+  }
+
+  .projects-header {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: #0f172a;
+  }
+
+  .project-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  .project-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #475569;
+  }
+
+  @media (max-width: 600px) {
+    .project-card {
+      padding: 1.25rem;
+    }
+
+    .project-title {
+      font-size: 1.4rem;
+    }
+
+    .project-description {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<div class="projects-container">
+  <div class="projects-header">🚀 Projects</div>
+
+  <div class="project-card">
+    <div class="project-title">📊 IPL Win Predictor</div>
+    <div class="project-description">
+      Logistic regression model to predict match outcomes based on historical IPL data.
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-title">🧠 Forget Gate is All You Need</div>
+    <div class="project-description">
+      A simplified LSTM variant for time series forecasting. Built entirely from scratch using NumPy.
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-title">🏠 House Price Estimator</div>
+    <div class="project-description">
+      Linear regression-based machine learning app to predict real estate prices in Bangalore.
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-title">⚛️ Quantum Compiler</div>
+    <div class="project-description">
+      Currently building a quantum circuit optimizer for novel hardware architectures, focusing on efficient MLIR-based transformation pipelines.
+    </div>
+  </div>
+</div>
